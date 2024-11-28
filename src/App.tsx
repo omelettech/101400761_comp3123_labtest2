@@ -16,8 +16,7 @@ const CITY_LIST = [
 ];
 const App = () => {
     const [city, setCity] = useState([]);
-    const [weatherData, setWeatherData] = useState<any>(null);
-    const [loading, setLoading] = useState(false);
+
     const [filteredCities, setFilteredCities] = useState([]);
     const [search, setSearch] = useState("")
     const API_KEY = "b57ac398a5b10cb60d91d476724fdbaa"; // Replace with your OpenWeatherMap API Key
@@ -64,7 +63,7 @@ const App = () => {
     }
 
     return (
-        <div className="app  flex justify-center items-center">
+        <div className="app  flex justify-center items-center w-full">
 
 
 
@@ -72,19 +71,19 @@ const App = () => {
                 <div>Switch theme</div>
                 <input type="checkbox" value="cyberpunk" className="toggle theme-controller" />
 
-                <header className="p-10 bg-secondary m-8 content-center">
+                <header className="p-10 bg-secondary m-8 content-center text-primary-content font-bold text-2xl w-full">
                     <h1>Weather App</h1>
                     <p>COMP3123 Lab Test 2 | Student ID: 123456789</p>
-                    <button className="btn items-center">Button</button>
 
                 </header>
-                <div className="content-center carousel-center">
+                <div className="w-full">
                     <input
-                        width={100}
+
                         type="text"
                         placeholder="Search by city name"
                         value={search}
                         onChange={handleSearch}
+                        className="w-full"
                     />
                 </div>
                 <div className="city-list">
