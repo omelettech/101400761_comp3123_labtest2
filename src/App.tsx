@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./App.css";
+import "./index.css"
 import {WeatherCard} from "./components/WeatherCard";
 const CITY_LIST = [
     'Toronto',
@@ -54,12 +54,24 @@ const App = () => {
         );
         setFilteredCities(filtered);
     };
+    const switchTheme = ()=> {
+        document.documentElement.getAttribute('data-theme') === "cyberpunk" ?
+            document.documentElement.setAttribute("data-theme", 'cyberpunk')
+    :
+        document.documentElement.setAttribute("data-theme", 'halloween');
+
+    }
 
     return (
-        <div className="app">
+        <div className="app flex-col align-middle justify-center">
+
+            <button className="btn btn-primary" onClick={switchTheme}>Switch theme</button>
+
             <header className="app-header">
                 <h1>Weather App</h1>
                 <p>COMP3123 Lab Test 2 | Student ID: 123456789</p>
+                <button className="btn">Button</button>
+
             </header>
 
             <main>
