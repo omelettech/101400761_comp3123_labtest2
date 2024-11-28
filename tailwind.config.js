@@ -11,8 +11,9 @@ module.exports = {
   plugins: [daisyui], // Add DaisyUI or other plugins here if needed
   daisyui: {
     themes: [
+      "halloween",
+
       "cyberpunk", // Optional dark theme
-        "halloween"
     ],
   },
 };

@@ -55,28 +55,32 @@ const App = () => {
         setFilteredCities(filtered);
     };
     const switchTheme = ()=> {
+        console.log(document.documentElement.getAttribute('data-theme'))
         document.documentElement.getAttribute('data-theme') === "cyberpunk" ?
-            document.documentElement.setAttribute("data-theme", 'cyberpunk')
+            document.documentElement.setAttribute("data-theme", 'halloween')
     :
-        document.documentElement.setAttribute("data-theme", 'halloween');
+        document.documentElement.setAttribute("data-theme", 'cyberpunk');
 
     }
 
     return (
-        <div className="app flex-col align-middle justify-center">
+        <div className="app  flex justify-center items-center">
 
-            <button className="btn btn-primary" onClick={switchTheme}>Switch theme</button>
 
-            <header className="app-header">
-                <h1>Weather App</h1>
-                <p>COMP3123 Lab Test 2 | Student ID: 123456789</p>
-                <button className="btn">Button</button>
 
-            </header>
+            <main >
+                <div>Switch theme</div>
+                <input type="checkbox" value="cyberpunk" className="toggle theme-controller" />
 
-            <main>
-                <div className="search-bar">
+                <header className="p-10 bg-secondary m-8 content-center">
+                    <h1>Weather App</h1>
+                    <p>COMP3123 Lab Test 2 | Student ID: 123456789</p>
+                    <button className="btn items-center">Button</button>
+
+                </header>
+                <div className="content-center carousel-center">
                     <input
+                        width={100}
                         type="text"
                         placeholder="Search by city name"
                         value={search}
