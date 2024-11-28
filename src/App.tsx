@@ -73,7 +73,7 @@ const App = () => {
 
                 <header className="p-10 bg-secondary m-8 content-center text-primary-content font-bold text-2xl w-full">
                     <h1>Weather App</h1>
-                    <p>COMP3123 Lab Test 2 | Student ID: 123456789</p>
+                    <p>COMP3123 Lab Test 2 | Student ID: 101400761</p>
 
                 </header>
                 <div className="w-full">
