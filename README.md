@@ -26,9 +26,10 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### Project Screenshots
 ![img.png](img.png)
+Description: Screenshot of SPA built with react, that shows weather updates along with search func
 
 ### Features
 
--Calls api from weather API provider to display weather specific to cities.
--Search between cities
+-Calls api from weather API provider to display weather specific to cities. <br>
+-Search between cities <br>
 -Switch themes
